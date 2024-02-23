@@ -1,0 +1,177 @@
+/* my-react-app/src/custom.css */
+
+/* Body styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-image: url("../world-tour.jpg");
+  background-size: cover; /* Redimensionner l'image pour remplir toute la zone */
+  background-position: center; /* Centrer l'image */
+  color: #fff; /* Couleur du texte */
+}
+
+/* Navbar styles */
+
+.navbar {
+  background-image: url("../pays.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #0062ff;
+  animation: rotateBackground 10s linear infinite;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Navbar-Brand {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* White color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.Navbar-Brand:hover {
+  transform: scale(1.1);
+  color: #ffcc00;
+}
+
+.navbar-nav .nav-link {
+  color: #000000;
+  font-family: "Arial", sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1b1a19;
+  background-color: #df1212;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animated-title {
+  font-size: 48px;
+  color: #f90707af;
+  text-align: center;
+  animation: rotate 4s linear infinite, bounce 1s infinite alternate;
+}
+
+/* Container styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Card styles */
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #c43a3a;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(239, 6, 6, 0.879);
+  background-color: #eaa2a2;
+  transition: background-color 0.5s ease;
+}
+
+.card:hover {
+  background-color: #83eded;
+  transform: translateY(-10px);
+}
+.card-title {
+  color: #05ff16;
+  text-align: center;
+}
+
+.card-text {
+  color: #222121;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.card-text:hover {
+  color: red;
+}
+
+/**** titre card *****/
+.card-title-container {
+  position: relative;
+}
+
+.card-title-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transition: background-color 0.9s ease;
+}
+
+.card-title-container:hover::after {
+  background-color: rgb(11, 255, 88);
+}
+
+@keyframes titleMovement {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-title:hover {
+  animation: titleMovement 0.9s ease;
+}
+.button {
+  background-color: #0d64c1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #004c99;
+  transform: scale(0.9);
+}
